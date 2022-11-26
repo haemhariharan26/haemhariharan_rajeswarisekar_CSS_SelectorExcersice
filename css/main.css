@@ -1,0 +1,168 @@
+/* reset all of the defaults to 0 so that you can write your OWN css */
+/* don't rely on the built-in browser defaults */
+
+* {
+    border: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+
+
+body { 
+    font-size: 16px;
+    background-color: rgba(0, 0, 0, 0.464);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-size: cover;
+    color: white;
+}
+
+
+.header {
+  background-color: #f44336;
+  background-image: url(../images/bg.jpg);
+  background-size: cover;
+  padding: 80px 80px;
+  color: white;
+  text-align: center;
+  margin-bottom: 3%;
+}
+
+header  h2 { 
+  margin-bottom: 2%;
+  text-align: center; padding: 8px; 
+  font-size: 65px;
+}
+
+header input {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+
+.addBtn {
+  padding: 10px;
+  width: 25%;
+  background: #951414;
+  color: rgb(255, 255, 255);
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+}
+
+
+article { 
+    width: 25%; 
+    border: 4px solid rgb(0, 0, 0); 
+    border-radius: 8px; 
+
+    display: inline-block;
+    margin: 10px 12px;
+
+    text-align: left;
+}
+
+main { text-align: center; }
+
+article > h2 {  background-color: #951414; color: #ffffff;  padding: 4px 8px; }
+
+article:first-of-type { border: 4px solid #951414; }
+
+#inprogress { border: 4px solid #951414; }
+#inprogress h2 { color: #ffffff; }
+
+#done { border: 4px solid #951414; }
+#done h2 { color: #ffffff; }
+
+ul { list-style-type: none; }
+
+ul li { padding: 6px 8px; text-transform: uppercase; }
+
+.todo li:nth-child(odd) { background-color: #ffffff80}
+
+.inprogress li:nth-child(odd) { background-color: #ffffff80}
+
+.done li:nth-child(odd) { background-color: #ffffff80}
+
+/* Checkbox */
+input[type="checkbox"] { margin-left: 10px;}
+
+input[type="checkbox"]:checked::after {
+    content: '\2713';
+    color: #fff;
+    width: 18px;
+    height: 20px;
+    padding: 4px;
+    background-color: rgb(4, 4, 4);
+    background-size: 15px 15px;
+    /* border: 2px solid orangered; */
+    border-radius: 5px;
+    right: 18px;
+    font-size: 1.5em;
+    margin-left: 30px;
+
+    animation: fadeIn 0.7s;
+  }
+
+ .inprogress input[type="checkbox"]:checked::after {
+    content: "";
+    background: url(../images/loading.gif) no-repeat;
+    background-size: 15px 15px;
+
+    /* width: 30px;
+    height: 20px; */
+    padding: 4px;
+    background-color: transparent;
+    border: 4px solid transparent;
+    /* position: absolute; */
+
+    left: 55%;
+    top: 15%;
+   
+    /* top: 10px;
+    right: 18px; */
+    font-size: 1.5em;
+
+
+    animation: fadeIn 0.7s;
+  }
+
+  .loading {
+    display: flex;
+    justify-content: center;
+  }
+
+  /* .loading::after {
+    content: "";
+    width: 15px;
+    height: 15px;
+    border: 10px solid transparent;
+    border-top-color: aquamarine;
+    border-radius: 50%;
+    animation: loading 1s linear infinite;
+  } */
+
+  /* .inprogress::after {
+    content: "";
+    width: 15px;
+    height: 15px;
+    border: 10px solid transparent;
+    border-top-color: aquamarine;
+    border-radius: 50%;
+    animation: loading 1s linear infinite;
+
+  } */
+  @keyframes loading {
+    to {
+        transform: rotate(1turn)
+    }
+  }
